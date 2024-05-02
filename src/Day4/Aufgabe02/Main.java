@@ -56,9 +56,17 @@ public class Main {
             System.out.println(s);
         }
 
-        PrüfeStrings prüfeStringsLänge = new PrüfeStrings(A_IstLängerAls_B())
+        PrüfeStrings prüfeStringsLänge = (s1, s2) -> s1.length() > s2.length();
+        Main.Sortiere(arr, prüfeStringsLänge);
 
+        System.out.println("Sortiert nach Länge");
+        Main.ausgabe(arr);
 
+       PrüfeStrings prüfeStringsE = ((s1, s2) -> A_hatMehrEAls_B(s1, s2));
+       Sortiere(arr,prüfeStringsE);
+
+        System.out.println("Soirtert nach Anzahl der E");
+        ausgabe(arr);
 
     }
 }
